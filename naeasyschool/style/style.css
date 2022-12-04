@@ -1,0 +1,710 @@
+body{
+    font-family: 'Didact Gothic', sans-serif;
+
+    
+}
+
+.modal-overlay{
+    display: none;
+}
+.modal-info{
+    display: none;
+}
+
+/*burger menu*/
+/*палички*/
+
+.check{
+    width: 30px;
+    height: 3px;
+    background-color: #575445;
+    border-radius: 2px;
+    margin-bottom: 4px;
+}
+.check:not(:last-of-type){   /*вибираємо усі окрім останнього*/
+    margin-bottom: 4px;
+}
+.checkbox, .check-wrapper{
+    display: none;           /*виключили*/
+}
+
+
+/* HEADER */
+
+
+.header{
+    background: transparent;
+    margin: 10px 0;
+    max-width: 1440px;
+    /* position: fixed; */
+   
+}
+.naseasy-logo{
+    max-width: 95px;
+}
+.main--flex::before{
+    content: ''url(../img/feathers/feaser.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;   
+}
+.main--flex::after{
+    content: ''url(../img/feathers/feasers.png);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+   max-height: 700px; 
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_link{
+    color: #182e63;
+    text-align: right;
+    text-decoration: none;
+    position: relative;
+}
+.header_ul{
+    margin-right: 40px;
+}
+.header_li:not(:last-of-type){
+    margin-right: 28px; 
+}
+.header_link--active{
+color: red;
+}
+.header_link:hover{
+    font-weight: bold;
+    transition: 300ms all;
+    color: rgb(0, 0, 0);
+}
+.header_link:hover::before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 0.5px;
+    background-color: rgb(164 189 215);
+    bottom: -0.5px;
+    transition: 1s;
+}
+.button{
+    border: none;
+    border-radius: 45px;
+    background-color: rgb(164 189 215);
+    color: #FFFFFF;
+}
+.button_1{
+    width: 143px;
+    height: 34px;
+    margin: 20px 0;
+}
+.button:hover{
+    cursor: pointer;
+    transition: 300ms;
+    background-color: rgb(114, 164, 217);
+    color:#012964;
+}
+
+
+/* section main */
+
+
+.main{
+    
+    max-width: 1440px;
+    margin: 0 auto; 
+    
+}
+
+h1{
+    font-family: 'Forum', cursive;
+    color: #012964;
+    font-weight: 500px;
+}
+.main--flex{
+    position: relative;
+    display: inline-block;
+    font-size: 48px;
+    line-height: 58px;
+}
+.main-info{
+ position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 22%; /* Регулируем это значение, чтобы перемещать позиционированный div вверх и вниз */
+    text-align: center;
+    width: 30%; /* Устанавливаем ширину позиционируемого div */
+}
+
+
+/* SECTION PRODUCTS*/
+
+.language-section{
+    position: relative;
+}
+
+.card-flex-column{
+    padding-bottom: 70px;
+}
+
+.card-flex-column::before{
+    content: ''url(../img/langvigue/backgraund_befor.png);
+    position: absolute;
+    bottom: 0;
+    left: 80px;  
+    z-index: 4; 
+}
+h2{
+    font-size: 35px;
+    /* font-family: 'Forum', cursive; */
+    color: #012964;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+}
+.products-flex-column::before{
+    content: ''url(../img/feathers/feaser.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+   
+}
+.products-flex-column::after{
+    content: ''url(../img/feathers/feasers.png);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.products{
+    background: #FAFAFC;
+    position: relative;
+    padding: 45px 0;
+}  
+.prodacts_info{
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+} 
+.grid_section-products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px; 
+    z-index: 1;
+}
+.products-img{
+    padding: 50px 0 10px;
+}
+.grid_products-title{
+    
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 24px;
+    text-align: center;
+    color:rgb(9, 9, 9);
+    padding-bottom: 10px;
+}
+.grid_products-text{ 
+    
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: rgb(171, 171, 172);
+    max-width: 287px;
+    text-align: center;
+    padding: 9px 50px 60px 50px;
+} 
+.products-img:hover{
+   transform: rotateY(180deg); 
+   transition: 1s all;
+   cursor: pointer;
+   
+}
+.section-products--hover, .products-flex-column{
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+.text--about{
+    color: rgb(164 189 215);
+}
+
+/*модальне вікно*/
+
+#open-modal-general:hover{
+    cursor: pointer;
+}
+#open-modal-course_for_children:hover{
+    cursor: pointer;
+}
+#open-modal-zno:hover{
+    cursor: pointer;
+}
+#open-modal-big_science:hover{
+    cursor: pointer;
+}
+#open-modal-business:hover{
+    cursor: pointer;
+}
+#open-modal-adults:hover{
+    cursor: pointer;
+}
+
+
+.span-modal{
+    font-weight: bold;
+}
+
+.modal-info, .modal-info-general, .modal-info-course_for_children, .modal-info-zno, .modal-info-big_science, .modal-info-business, .modal-info-adults{
+    display: none; /*для того щоб модалка не зявлялася 
+   сама по собі а лише у випадку нажаття на кнопку*/
+   position: fixed;
+   background-color: rgba(0, 0, 0, 0.3);
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 99;
+  }
+.modal-info__modal{
+   max-width: 550px;
+   /* text-align: center; */
+   background-color: rgb(226, 226, 226);
+   opacity: 1;
+   padding: 30px 30px 10px 30px;
+   box-sizing: border-box;  /*щоб збараглися пропорції нашого боксу*/
+   border-radius: 10px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   }
+   .modal-info__text{
+    font-size: 16px;
+    text-align: left;
+    padding-bottom: 30px;
+   }
+  .close{
+       position: absolute;
+       top: 10px;
+       right: 30px;
+       cursor: pointer;
+   }
+
+ 
+/*SECTION LANGUAGE*/
+
+    
+.title-language{
+        text-align: center;
+        margin: 25px 0;
+    }
+.card-flex-column,.card_info{
+    flex-direction: column;
+    text-align: center;
+}
+.text-card-section{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #575445;
+    max-width: 538px;
+}
+.grid_section-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   
+    gap: 20px; 
+    text-align: center;
+    padding: 21px;
+}
+
+
+/* Card styles */
+
+.card{
+    width: 368px;
+    height: 481px;
+    perspective: 1200px;
+}
+.card__inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.card:hover .card__inner {
+    transform: rotateY(180deg);
+}
+.card__front, .card__back {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+}
+.card__back{
+    transform: rotateY(180deg);
+}
+
+
+       /* section slider */
+
+    .title-reviews{
+        opacity: .8;
+        font-size: 24px;
+        text-align: center;
+        
+    }
+
+    .slider{    
+        position: relative;
+    }
+    /* .slider-info{
+        text-align: center;
+    } */
+
+    .ticher-title{
+        margin: 0 auto;
+        font-size: 24px;
+        line-height: 34px;
+        text-align: center;    
+        color: rgb(46 108 147);
+        padding-bottom: 25px;
+    }
+    .ticher-text{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        
+    }
+    .ticher-pers{
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+
+    }
+    
+    .ticher-info{
+        flex-direction: column;
+        margin: 0 auto;
+        width: 150px;
+        
+    }
+
+
+
+
+ .main--flex{
+    position: relative;
+    }
+.main--flex > div:first-of-type{ /*звертаємося до першого діва в section main*/
+    z-index: 0;
+   text-align: center;
+}
+.main--flex > div:last-of-type{ /*звертаємося до другого діва в section main*/
+    z-index: 2;
+    position: absolute; /* ставимо на дів з картинкою
+                        і вона виходить на ДРУГИЙ ШАР
+                        ЗА ТЕКСТОМ*/     
+}
+
+
+
+/* section slider */
+
+
+
+.reviews, .slider{    
+    position: relative;
+ 
+}
+.slider-info{
+    text-align: center;
+}
+.title-reviews{
+    
+    margin: 25px ;
+}
+.slider-img{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding-right: 25px;      
+}
+.slider-title{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    padding: 28px 0;
+}
+.slider_foto{
+    display: inline;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+.slider-text{
+    margin: 0 auto;
+    max-width: 750px;
+    font-size: 15px;
+    line-height: 19px;
+    text-align: center;    
+    color: #2B292D;
+    padding-bottom: 34px;
+}
+.slider-pers{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #2B292D;
+}
+
+/* .slider-line{ 
+    max-width: 100%;
+    background: white;
+    padding: 30px 30px 24px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(43, 41, 45, 0.1);
+    margin-bottom: 13px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+           /*стрілочка в кружечку*/
+
+
+
+           #up{
+            display:block;
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            bottom: 50px;
+            right: 50px;
+            background-color: rgba(117, 120, 170, 0.3);
+            
+            font-size: 25px;
+            font-weight: bold;
+            color:white ;
+            cursor: pointer;
+            box-shadow: 2px 2px 4px #000000;
+            
+        }
+        #up span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: inline-block;
+            transform: rotate(-90deg) translate(80%, -25%);
+            
+    
+        }
+
+
+
+/*модальне вікно*/
+
+
+
+.modal-overlay{
+     display: none; /*для того щоб модалка не зявлялася 
+    сама по собі а лише у випадку нажаття на кнопку*/
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+   }
+.modal{
+    max-width: 550px;
+    text-align: center;
+    background-color: rgb(228, 244, 251);
+    opacity: 0.8;
+    padding: 50px 30px;
+    box-sizing: border-box;  /*щоб збараглися пропорції нашого боксу*/
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+   .close{
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        cursor: pointer;
+    }
+  .guruweba_example_form,.form-selekt {
+    width: 290px;
+  }
+  .guruweba_example_caption {
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+  }
+  .guruweba_example_form .guruweba_example_infofield {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .guruweba_example_form select, .guruweba_example_form input, .guruweba_example_form textarea {
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px 0;
+  }
+
+
+
+  /*FOOTER*/
+
+footer{
+    height: 567px;
+    background: rgb(45, 95, 156);
+}
+.footer-flex{
+    flex-direction: column;
+}
+.footer-img{
+    max-width: 275px;
+    margin-top: 50px;
+}
+
+.pages,.categories,.company{
+font-weight: 400;
+font-size: 14px;
+line-height: 30px;
+color: #CACCD1;
+}
+
+.footer_info{
+    min-width: 1200px;
+}
+.footer_span{
+    text-transform: uppercase;
+}
+.newsletter{
+    font-size: 14px;
+    line-height: 20px;
+    color: #FAFAFC;
+    max-width: 438px;
+    margin-bottom: 10px;
+}
+input{
+    box-sizing: border-box;
+    width: 485px; 
+    height: 53px;
+    border-radius: 10px;
+    border: none; 
+    padding-left: 10px;
+    
+}
+.button-footer{  
+    background-color: rgb(57, 66, 75);
+    width: 73px; 
+    height: 39px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: none; 
+}
+.position{
+    position: relative;
+}
+.button-footer{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+.footer_bottom_text{
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.icon_footer{
+    margin-right: 25px;
+}
+.footer_bottom{
+    margin-top: 30px;
+}
+
+.footer_pos_feathers{
+    position: relative;
+    padding-bottom: 80px;
+
+}
+/* .footer-flex{
+    position: relative;
+} */
+.footer_logo::before{
+    content: ''url(../img/feathers/feaser_withe.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+   
+}
+.footer_logo::after{
+    content: ''url(../img/feathers/feasers_withe.png);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.img_li{
+    max-width: 400px;
+
+box-shadow: 0px 6px 13.2px 1.8px rgba(0, 0, 0, 0.06);
+        padding: 40px 10px;
+        margin-bottom: 15px;
+        width: 242px;   
+    }
+    .container_social{
+        position: relative;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

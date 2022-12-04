@@ -1,0 +1,338 @@
+body{
+    font-family: 'Didact Gothic', sans-serif;
+
+    
+}
+
+.modal-overlay{
+    display: none;
+}
+.modal-info{
+    display: none;
+}
+
+/*burger menu*/
+/*палички*/
+
+.check{
+    width: 30px;
+    height: 3px;
+    background-color: #575445;
+    border-radius: 2px;
+    margin-bottom: 4px;
+}
+.check:not(:last-of-type){   /*вибираємо усі окрім останнього*/
+    margin-bottom: 4px;
+}
+.checkbox, .check-wrapper{
+    display: none;           /*виключили*/
+}
+
+
+/* HEADER */
+
+
+.header{
+    background: transparent;
+    margin: 10px 0;
+    max-width: 1440px;
+    /* position: fixed; */
+   
+}
+.naseasy-logo{
+    max-width: 95px;
+}
+.main--flex::before{
+    content: ''url(../img/feathers/feaser.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;   
+}
+.main--flex::after{
+    content: ''url(../img/feathers/feasers.png);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+   max-height: 700px; 
+  
+}
+
+.img_main_english{
+    opacity: 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_link{
+    color: #182e63;
+    text-align: right;
+    text-decoration: none;
+    position: relative;
+}
+.header_ul{
+    margin-right: 40px;
+}
+.header_li:not(:last-of-type){
+    margin-right: 28px; 
+}
+.header_link--active{
+color: red;
+
+}
+.header_link:hover{
+    font-weight: bold;
+    transition: 300ms all;
+    color: rgb(0, 0, 0);
+}
+.header_link:hover::before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 0.5px;
+    background-color: rgb(164 189 215);
+    bottom: -0.5px;
+    transition: 1s;
+}
+.button{
+    border: none;
+    border-radius: 45px;
+    background-color: rgb(164 189 215);
+    color: #FFFFFF;
+}
+.button_1{
+    width: 143px;
+    height: 34px;
+    margin: 20px 0;
+}
+.button:hover{
+    cursor: pointer;
+    transition: 300ms;
+    background-color: rgb(114, 164, 217);
+    color:#012964;
+}
+
+
+
+
+
+
+
+
+
+
+
+           /*стрілочка в кружечку*/
+
+
+
+           #up{
+            display:block;
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            bottom: 50px;
+            right: 50px;
+            background-color: rgba(117, 120, 170, 0.3);
+            
+            font-size: 25px;
+            font-weight: bold;
+            color:white ;
+            cursor: pointer;
+            box-shadow: 2px 2px 4px #000000;
+            
+        }
+        #up span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: inline-block;
+            transform: rotate(-90deg) translate(80%, -25%);
+            
+    
+        }
+
+
+
+/*модальне вікно*/
+
+
+
+.modal-overlay{
+     display: none; /*для того щоб модалка не зявлялася 
+    сама по собі а лише у випадку нажаття на кнопку*/
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+   }
+.modal{
+    max-width: 550px;
+    text-align: center;
+    background-color: rgb(228, 244, 251);
+    opacity: 0.8;
+    padding: 50px 30px;
+    box-sizing: border-box;  /*щоб збараглися пропорції нашого боксу*/
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+   .close{
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        cursor: pointer;
+    }
+  .guruweba_example_form,.form-selekt {
+    width: 290px;
+  }
+  .guruweba_example_caption {
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+  }
+  .guruweba_example_form .guruweba_example_infofield {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .guruweba_example_form select, .guruweba_example_form input, .guruweba_example_form textarea {
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px 0;
+  }
+
+
+
+  /*FOOTER*/
+
+footer{
+   min-height: 500px;
+    background: rgb(45, 95, 156);
+}
+.footer-flex{
+    flex-direction: column;
+}
+.footer-img{
+    max-width: 275px;
+    margin-top: 50px;
+}
+
+.pages,.categories,.company{
+font-weight: 400;
+font-size: 14px;
+line-height: 30px;
+color: #CACCD1;
+}
+
+.footer_info{
+    min-width: 1200px;
+}
+.footer_span{
+    text-transform: uppercase;
+}
+.newsletter{
+    font-size: 20px;
+    line-height: 26px;
+    color: #FAFAFC;
+    max-width: 438px;
+    margin-top: 50px ;
+}
+input{
+    box-sizing: border-box;
+    width: 485px; 
+    height: 53px;
+    border-radius: 10px;
+    border: none; 
+    padding-left: 10px;
+    
+}
+.button-footer{  
+    background-color: rgb(57, 66, 75);
+    width: 73px; 
+    height: 39px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: none; 
+}
+.position{
+    position: relative;
+}
+.button-footer{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+.container_social{
+    max-width: 100px;
+    margin-top: 50px ;
+}
+
+.footer_bottom_text{
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-top: 50px ;
+}
+.icon_footer{
+    margin-right: 25px;
+}
+.footer_bottom{
+    margin-top: 30px;
+}
+
+.footer_pos_feathers{
+    position: relative;
+    padding-bottom: 80px;
+
+}
+
+.footer_logo::before{
+    content: ''url(../img/feathers/feaser_withe.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+   
+}
+.footer_logo::after{
+    content: ''url(../img/feathers/feasers_withe.png);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
